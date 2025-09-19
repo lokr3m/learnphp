@@ -5,13 +5,15 @@ class Box {
     public $height;
     public $lenght;
 
+    use Colorful, Smelly;
+
     public function setWidth($width) {
         if(is_numeric($width) && $width > 0){
             $this->width = $width;
         } else {
             throw new Exception('You are an idiot');
         }
-        
+
     }
 
     public function getWidth(){
@@ -36,6 +38,24 @@ class MetalBox extends Box {
     }
 }
 
+class Cat {
+    use Colorful;
+}
+
+trait Colorful {
+    public $color;
+    public function setColor($color) {
+        $this->color = $color;
+    }
+}
+
+trait Smelly {
+    public $smell;
+    public function setSmell($smell) {
+        $this->smell = $smell;
+    }
+}
+
 $metalBox1 = new MetalBox();
 $metalBox1->setWidth(32);
 //$metalBox1->test();
@@ -44,4 +64,3 @@ $metalBox1->height = 20;
 $metalBox1->lenght = 30;
 
 var_dump($metalBox1->volume());
-var_dump($metalBox1);

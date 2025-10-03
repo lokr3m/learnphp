@@ -12,7 +12,6 @@ function dump(...$args)
 }
 
 spl_autoload_register(function ($class){
-    dump($class);
     $class = substr($class, 4);
     require_once __DIR__ . "/../src/$class.php";
 });

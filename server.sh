@@ -1,1 +1,2 @@
-php -S localhost:8000 public/index.phpaphp -S localhost:8000 -t public public/index.php
+#!/bin/bash
+php -S localhost:8000 -t public public/index.php

@@ -1,0 +1,19 @@
+{
+    "name": "lokr3m/learnphp",
+    "type": "project",
+    "license": "WTFPL",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sergey Sidorkin",
+            "email": "sergei.sidorkin@tptlive.ee"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^7.3"
+    }
+}
